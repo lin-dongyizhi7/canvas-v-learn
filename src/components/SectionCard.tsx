@@ -43,6 +43,38 @@ export function SectionCard({ section }: SectionCardProps) {
                   <article key={api.name} className="api-card">
                     <strong>{api.name}</strong>
                     <p>{api.description}</p>
+                    {api.params?.length ? (
+                      <div className="api-card__params">
+                        <h4>参数使用</h4>
+                        <ul>
+                          {api.params.map((param) => (
+                            <li key={`${api.name}-${param.name}`}>
+                              <code>{param.name}</code>
+                              <span className="api-card__param-type">{param.type}</span>
+                              <span>{param.description}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
+                    {api.docs?.length ? (
+                      <div className="api-card__docs">
+                        <h4>文档跳转</h4>
+                        <div className="tag-row">
+                          {api.docs.map((doc) => (
+                            <a
+                              key={`${api.name}-${doc.href}`}
+                              className="api-doc-link"
+                              href={doc.href}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              {doc.label}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ) : null}
                   </article>
                 ))}
               </div>
