@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas 学习项目</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="hero">
+        <div class="brand">
+          <h1>Canvas 学习项目</h1>
+          <p>
+            一套围绕 Canvas 常见 API、概念讲解、代码示例和练习模块搭建的学习站。
+            你可以从 Vue、React、原生 JS 三种视角进入同一套知识地图。
+          </p>
+        </div>
+
+        <div class="framework-links" id="framework-links"></div>
+      </section>
+
+      <section class="panel">
+        <h2>你会在这里学到什么</h2>
+        <div class="card-grid">
+          <article class="feature-card">
+            <h3>常见 API 全景</h3>
+            <p class="muted">
+              从基础图形、样式文本、变换、像素处理到动画交互，章节成体系排列。
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>三套前端实现</h3>
+            <p class="muted">
+              同一份知识，用 Vue、React、原生 JS 分别讲一遍，不让框架差异偷走理解。
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>练习模块</h3>
+            <p class="muted">
+              提供可直接动手的自由画布，适合你继续补颜色、橡皮擦、导出等功能。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>学习建议</h2>
+        <ol class="info-list">
+          <li>先看独立文档菜单，了解章节地图和重点 API。</li>
+          <li>再任选一种技术栈进入学习站，边看概念边看预览。</li>
+          <li>最后回到练习模块，自己把功能往上堆，记忆会比死背牢很多。</li>
+        </ol>
+      </section>
+    </main>
+
+    <script src="./shared/course-data.js"></script>
+    <script>
+      const container = document.querySelector("#framework-links");
+      window.CanvasCourseData.frameworkCards.forEach((card) => {
+        const link = document.createElement("a");
+        link.href = card.href;
+        link.innerHTML = `<strong>${card.title}</strong><br /><span class="muted">${card.description}</span>`;
+        container.appendChild(link);
+      });
+    </script>
+  </body>
+</html>

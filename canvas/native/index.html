@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas 学习站 - 原生 JS</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <h2>原生 JS 学习站</h2>
+                <p>最贴近 Canvas 本体的学习方式，每个 API 都是你亲手调用。</p>
+            </div>
+            <div class="doc-links">
+                <a href="../index.html">返回总入口</a>
+                <a href="../docs/index.html">文档菜单</a>
+            </div>
+            <div class="menu-list" id="lesson-menu"></div>
+        </aside>
+
+        <main class="main">
+            <div class="panel">
+                <h2 id="lesson-title"></h2>
+                <p class="muted" id="lesson-summary"></p>
+                <div class="tag-list" id="lesson-apis"></div>
+            </div>
+
+            <div class="panel-layout">
+                <section class="panel canvas-wrap">
+                    <h2>预览画布</h2>
+                    <canvas id="lesson-canvas" class="canvas-stage" width="420" height="240"></canvas>
+                    <p class="muted" id="lesson-tip">
+                        当前章节会在这里自动渲染示例；切到练习模块时可直接在画布上涂鸦。
+                    </p>
+                    <div class="practice-toolbar">
+                        <button id="reset-preview">重绘当前示例</button>
+                        <button id="clear-practice" class="secondary">清空练习画布</button>
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <h2>概念讲解</h2>
+                    <ul class="info-list" id="lesson-concepts"></ul>
+
+                    <h2>学习目标</h2>
+                    <ul class="info-list" id="lesson-goals"></ul>
+
+                    <h2>练习建议</h2>
+                    <ul class="exercise-list" id="lesson-practice"></ul>
+                </section>
+            </div>
+
+            <section class="code-panel">
+                <pre><code id="lesson-code"></code></pre>
+            </section>
+        </main>
+    </div>
+
+    <script src="../shared/course-data.js"></script>
+    <script src="../shared/demo-engine.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas 完整文档菜单</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <h2>Canvas 文档菜单</h2>
+                <p>这是独立的概念文档页，适合先总览，再进入某个技术栈学习站。</p>
+            </div>
+            <div class="doc-links">
+                <a href="../index.html">返回总入口</a>
+                <a href="../vue/index.html">Vue 版</a>
+                <a href="../react/index.html">React 版</a>
+                <a href="../native/index.html">原生版</a>
+            </div>
+            <div class="doc-menu" id="doc-menu"></div>
+        </aside>
+
+        <main class="main">
+            <section class="panel">
+                <h2>学习路径</h2>
+                <ol class="info-list">
+                    <li>先掌握基础图形和样式文本，建立对坐标和绘图状态的直觉。</li>
+                    <li>再学习变换、像素和动画，理解 Canvas 作为渲染系统的能力边界。</li>
+                    <li>最后用练习模块继续加功能，把“会看”推进到“会写”。</li>
+                </ol>
+            </section>
+
+            <div id="doc-content"></div>
+        </main>
+    </div>
+
+    <script src="../shared/course-data.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
