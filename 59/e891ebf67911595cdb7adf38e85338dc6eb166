@@ -1,0 +1,850 @@
+src/components/SectionCard.tsx
+  s_959c092eaa8c66::t_f9dc557ff777dd 46-77 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a5604ae34947f87aa167bd5","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Range":[46,77]}]}]}
+src/index.css
+  s_959c092eaa8c66::t_ba2d8313499d66 261-319 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a5604bb34947f87aa167c05","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Range":[261,319]}]}]}
+src/data/section-support.ts
+  s_959c092eaa8c66::t_be11bce20c1bd0 3-13,17-18,21-25,31-48,53-65,70-82,89-105,110-121,126-137,142-153,160-190,195-215,220-241,246-276,283-310,315-326,331-345,352-364,369-391,396-405,410-431,438-447,452-463,468-480,487-501,506-528,533-553,560-582,587-604,609-623,630-642,647-664,669-678,685-702,707-724,729-741,748-765,770-787,792-804,811-823,828-840,845-866,873-894,899-920,925-944,951-970,975-984,989-997,1004-1019,1024-1043,1048-1067,1074-1083,1088-1102,1107-1121,1128-1137,1142-1156,1161-1170,1177-1191,1196-1211,1216-1230 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a56043134947f87aa167bb5","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Range":[3,13]},{"Range":[17,18]},{"Range":[21,25]},{"Range":[31,48]},{"Range":[53,65]},{"Range":[70,82]},{"Range":[89,105]},{"Range":[110,121]},{"Range":[126,137]},{"Range":[142,153]},{"Range":[160,190]},{"Range":[195,215]},{"Range":[220,241]},{"Range":[246,276]},{"Range":[283,310]},{"Range":[315,326]},{"Range":[331,345]},{"Range":[352,364]},{"Range":[369,391]},{"Range":[396,405]},{"Range":[410,431]},{"Range":[438,447]},{"Range":[452,463]},{"Range":[468,480]},{"Range":[487,501]},{"Range":[506,528]},{"Range":[533,553]},{"Range":[560,582]},{"Range":[587,604]},{"Range":[609,623]},{"Range":[630,642]},{"Range":[647,664]},{"Range":[669,678]},{"Range":[685,702]},{"Range":[707,724]},{"Range":[729,741]},{"Range":[748,765]},{"Range":[770,787]},{"Range":[792,804]},{"Range":[811,823]},{"Range":[828,840]},{"Range":[845,866]},{"Range":[873,894]},{"Range":[899,920]},{"Range":[925,944]},{"Range":[951,970]},{"Range":[975,984]},{"Range":[989,997]},{"Range":[1004,1019]},{"Range":[1024,1043]},{"Range":[1048,1067]},{"Range":[1074,1083]},{"Range":[1088,1102]},{"Range":[1107,1121]},{"Range":[1128,1137]},{"Range":[1142,1156]},{"Range":[1161,1170]},{"Range":[1177,1191]},{"Range":[1196,1211]},{"Range":[1216,1230]}]}]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "59e891ebf67911595cdb7adf38e85338dc6eb166",
+  "prompts": {},
+  "sessions": {
+    "s_959c092eaa8c66": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a55c84f34947f87aa166ae1",
+        "model": "gpt-5.4__dev"
+      },
+      "human_author": "yangzhaopu <yangzhaopu@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {
+    "src/components/SectionCard.tsx": [
+      {
+        "hash": "s_959c092eaa8c66::t_f9dc557ff777dd",
+        "line_ranges": [
+          {
+            "Range": [
+              46,
+              77
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a5604ae34947f87aa167bd5",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Range": [
+                  46,
+                  77
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "src/data/section-support.ts": [
+      {
+        "hash": "s_959c092eaa8c66::t_be11bce20c1bd0",
+        "line_ranges": [
+          {
+            "Range": [
+              3,
+              13
+            ]
+          },
+          {
+            "Range": [
+              17,
+              18
+            ]
+          },
+          {
+            "Range": [
+              21,
+              25
+            ]
+          },
+          {
+            "Range": [
+              31,
+              48
+            ]
+          },
+          {
+            "Range": [
+              53,
+              65
+            ]
+          },
+          {
+            "Range": [
+              70,
+              82
+            ]
+          },
+          {
+            "Range": [
+              89,
+              105
+            ]
+          },
+          {
+            "Range": [
+              110,
+              121
+            ]
+          },
+          {
+            "Range": [
+              126,
+              137
+            ]
+          },
+          {
+            "Range": [
+              142,
+              153
+            ]
+          },
+          {
+            "Range": [
+              160,
+              190
+            ]
+          },
+          {
+            "Range": [
+              195,
+              215
+            ]
+          },
+          {
+            "Range": [
+              220,
+              241
+            ]
+          },
+          {
+            "Range": [
+              246,
+              276
+            ]
+          },
+          {
+            "Range": [
+              283,
+              310
+            ]
+          },
+          {
+            "Range": [
+              315,
+              326
+            ]
+          },
+          {
+            "Range": [
+              331,
+              345
+            ]
+          },
+          {
+            "Range": [
+              352,
+              364
+            ]
+          },
+          {
+            "Range": [
+              369,
+              391
+            ]
+          },
+          {
+            "Range": [
+              396,
+              405
+            ]
+          },
+          {
+            "Range": [
+              410,
+              431
+            ]
+          },
+          {
+            "Range": [
+              438,
+              447
+            ]
+          },
+          {
+            "Range": [
+              452,
+              463
+            ]
+          },
+          {
+            "Range": [
+              468,
+              480
+            ]
+          },
+          {
+            "Range": [
+              487,
+              501
+            ]
+          },
+          {
+            "Range": [
+              506,
+              528
+            ]
+          },
+          {
+            "Range": [
+              533,
+              553
+            ]
+          },
+          {
+            "Range": [
+              560,
+              582
+            ]
+          },
+          {
+            "Range": [
+              587,
+              604
+            ]
+          },
+          {
+            "Range": [
+              609,
+              623
+            ]
+          },
+          {
+            "Range": [
+              630,
+              642
+            ]
+          },
+          {
+            "Range": [
+              647,
+              664
+            ]
+          },
+          {
+            "Range": [
+              669,
+              678
+            ]
+          },
+          {
+            "Range": [
+              685,
+              702
+            ]
+          },
+          {
+            "Range": [
+              707,
+              724
+            ]
+          },
+          {
+            "Range": [
+              729,
+              741
+            ]
+          },
+          {
+            "Range": [
+              748,
+              765
+            ]
+          },
+          {
+            "Range": [
+              770,
+              787
+            ]
+          },
+          {
+            "Range": [
+              792,
+              804
+            ]
+          },
+          {
+            "Range": [
+              811,
+              823
+            ]
+          },
+          {
+            "Range": [
+              828,
+              840
+            ]
+          },
+          {
+            "Range": [
+              845,
+              866
+            ]
+          },
+          {
+            "Range": [
+              873,
+              894
+            ]
+          },
+          {
+            "Range": [
+              899,
+              920
+            ]
+          },
+          {
+            "Range": [
+              925,
+              944
+            ]
+          },
+          {
+            "Range": [
+              951,
+              970
+            ]
+          },
+          {
+            "Range": [
+              975,
+              984
+            ]
+          },
+          {
+            "Range": [
+              989,
+              997
+            ]
+          },
+          {
+            "Range": [
+              1004,
+              1019
+            ]
+          },
+          {
+            "Range": [
+              1024,
+              1043
+            ]
+          },
+          {
+            "Range": [
+              1048,
+              1067
+            ]
+          },
+          {
+            "Range": [
+              1074,
+              1083
+            ]
+          },
+          {
+            "Range": [
+              1088,
+              1102
+            ]
+          },
+          {
+            "Range": [
+              1107,
+              1121
+            ]
+          },
+          {
+            "Range": [
+              1128,
+              1137
+            ]
+          },
+          {
+            "Range": [
+              1142,
+              1156
+            ]
+          },
+          {
+            "Range": [
+              1161,
+              1170
+            ]
+          },
+          {
+            "Range": [
+              1177,
+              1191
+            ]
+          },
+          {
+            "Range": [
+              1196,
+              1211
+            ]
+          },
+          {
+            "Range": [
+              1216,
+              1230
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a56043134947f87aa167bb5",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Range": [
+                  3,
+                  13
+                ]
+              },
+              {
+                "Range": [
+                  17,
+                  18
+                ]
+              },
+              {
+                "Range": [
+                  21,
+                  25
+                ]
+              },
+              {
+                "Range": [
+                  31,
+                  48
+                ]
+              },
+              {
+                "Range": [
+                  53,
+                  65
+                ]
+              },
+              {
+                "Range": [
+                  70,
+                  82
+                ]
+              },
+              {
+                "Range": [
+                  89,
+                  105
+                ]
+              },
+              {
+                "Range": [
+                  110,
+                  121
+                ]
+              },
+              {
+                "Range": [
+                  126,
+                  137
+                ]
+              },
+              {
+                "Range": [
+                  142,
+                  153
+                ]
+              },
+              {
+                "Range": [
+                  160,
+                  190
+                ]
+              },
+              {
+                "Range": [
+                  195,
+                  215
+                ]
+              },
+              {
+                "Range": [
+                  220,
+                  241
+                ]
+              },
+              {
+                "Range": [
+                  246,
+                  276
+                ]
+              },
+              {
+                "Range": [
+                  283,
+                  310
+                ]
+              },
+              {
+                "Range": [
+                  315,
+                  326
+                ]
+              },
+              {
+                "Range": [
+                  331,
+                  345
+                ]
+              },
+              {
+                "Range": [
+                  352,
+                  364
+                ]
+              },
+              {
+                "Range": [
+                  369,
+                  391
+                ]
+              },
+              {
+                "Range": [
+                  396,
+                  405
+                ]
+              },
+              {
+                "Range": [
+                  410,
+                  431
+                ]
+              },
+              {
+                "Range": [
+                  438,
+                  447
+                ]
+              },
+              {
+                "Range": [
+                  452,
+                  463
+                ]
+              },
+              {
+                "Range": [
+                  468,
+                  480
+                ]
+              },
+              {
+                "Range": [
+                  487,
+                  501
+                ]
+              },
+              {
+                "Range": [
+                  506,
+                  528
+                ]
+              },
+              {
+                "Range": [
+                  533,
+                  553
+                ]
+              },
+              {
+                "Range": [
+                  560,
+                  582
+                ]
+              },
+              {
+                "Range": [
+                  587,
+                  604
+                ]
+              },
+              {
+                "Range": [
+                  609,
+                  623
+                ]
+              },
+              {
+                "Range": [
+                  630,
+                  642
+                ]
+              },
+              {
+                "Range": [
+                  647,
+                  664
+                ]
+              },
+              {
+                "Range": [
+                  669,
+                  678
+                ]
+              },
+              {
+                "Range": [
+                  685,
+                  702
+                ]
+              },
+              {
+                "Range": [
+                  707,
+                  724
+                ]
+              },
+              {
+                "Range": [
+                  729,
+                  741
+                ]
+              },
+              {
+                "Range": [
+                  748,
+                  765
+                ]
+              },
+              {
+                "Range": [
+                  770,
+                  787
+                ]
+              },
+              {
+                "Range": [
+                  792,
+                  804
+                ]
+              },
+              {
+                "Range": [
+                  811,
+                  823
+                ]
+              },
+              {
+                "Range": [
+                  828,
+                  840
+                ]
+              },
+              {
+                "Range": [
+                  845,
+                  866
+                ]
+              },
+              {
+                "Range": [
+                  873,
+                  894
+                ]
+              },
+              {
+                "Range": [
+                  899,
+                  920
+                ]
+              },
+              {
+                "Range": [
+                  925,
+                  944
+                ]
+              },
+              {
+                "Range": [
+                  951,
+                  970
+                ]
+              },
+              {
+                "Range": [
+                  975,
+                  984
+                ]
+              },
+              {
+                "Range": [
+                  989,
+                  997
+                ]
+              },
+              {
+                "Range": [
+                  1004,
+                  1019
+                ]
+              },
+              {
+                "Range": [
+                  1024,
+                  1043
+                ]
+              },
+              {
+                "Range": [
+                  1048,
+                  1067
+                ]
+              },
+              {
+                "Range": [
+                  1074,
+                  1083
+                ]
+              },
+              {
+                "Range": [
+                  1088,
+                  1102
+                ]
+              },
+              {
+                "Range": [
+                  1107,
+                  1121
+                ]
+              },
+              {
+                "Range": [
+                  1128,
+                  1137
+                ]
+              },
+              {
+                "Range": [
+                  1142,
+                  1156
+                ]
+              },
+              {
+                "Range": [
+                  1161,
+                  1170
+                ]
+              },
+              {
+                "Range": [
+                  1177,
+                  1191
+                ]
+              },
+              {
+                "Range": [
+                  1196,
+                  1211
+                ]
+              },
+              {
+                "Range": [
+                  1216,
+                  1230
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "src/index.css": [
+      {
+        "hash": "s_959c092eaa8c66::t_ba2d8313499d66",
+        "line_ranges": [
+          {
+            "Range": [
+              261,
+              319
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a5604bb34947f87aa167c05",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Range": [
+                  261,
+                  319
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "s_959c092eaa8c66": {
+      "tool": "trae",
+      "conversation_id": "6a55c84f34947f87aa166ae1",
+      "session_id": "6a55c84f34947f87aa166ae1",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_959c092eaa8c66::t_ba2d8313499d66": {
+      "tool": "trae",
+      "conversation_id": "6a55c84f34947f87aa166ae1",
+      "session_id": "6a55c84f34947f87aa166ae1",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_959c092eaa8c66::t_be11bce20c1bd0": {
+      "tool": "trae",
+      "conversation_id": "6a55c84f34947f87aa166ae1",
+      "session_id": "6a55c84f34947f87aa166ae1",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_959c092eaa8c66::t_f9dc557ff777dd": {
+      "tool": "trae",
+      "conversation_id": "6a55c84f34947f87aa166ae1",
+      "session_id": "6a55c84f34947f87aa166ae1",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
