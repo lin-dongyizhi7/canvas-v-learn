@@ -3,18 +3,20 @@ import Editor from "@monaco-editor/react";
 interface MonacoCodeEditorProps {
   value: string;
   language: "html" | "typescript";
+  height?: string;
   onChange: (value: string) => void;
 }
 
 export function MonacoCodeEditor({
   value,
   language,
+  height = "600px",
   onChange,
 }: MonacoCodeEditorProps) {
   return (
     <div className="monaco-shell">
       <Editor
-        height="320px"
+        height={height}
         language={language}
         value={value}
         theme="vs-dark"

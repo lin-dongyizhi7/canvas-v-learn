@@ -20,6 +20,9 @@ export function HomePage() {
           <Link className="button-link" to="/module/canvas">
             先学 Canvas
           </Link>
+          <Link className="button-link" to="/interview">
+            看面试题库
+          </Link>
           <Link className="button-link" to="/leetcode">
             去刷题闭环
           </Link>
@@ -38,6 +41,10 @@ export function HomePage() {
         <article className="metric-card">
           <h3>练习闭环</h3>
           <p className="muted">章节练习 + LeetCode 跳转页，减少学完就散架的尴尬。</p>
+        </article>
+        <article className="metric-card">
+          <h3>面试题沉淀</h3>
+          <p className="muted">新增一整页高频问题，帮你把知识整理成可表达的答案。</p>
         </article>
       </section>
 

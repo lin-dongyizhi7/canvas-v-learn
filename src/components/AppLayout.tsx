@@ -1,8 +1,16 @@
-import { NavLink } from "react-router-dom";
-import { moduleRouteMeta } from "../data/modules";
+import { NavLink, useLocation } from "react-router-dom";
+import {
+  buildSectionPath,
+  getModuleById,
+  moduleRouteMeta,
+} from "../data/modules";
 import type { PropsWithChildren } from "react";
 
 export function AppLayout({ children }: PropsWithChildren) {
+  const location = useLocation();
+  const moduleMatch = location.pathname.match(/^\/module\/([^/]+)/);
+  const currentModule = getModuleById(moduleMatch?.[1]);
+
   return (
     <div className="app-shell">
       <aside className="sidebar">
@@ -23,6 +31,14 @@ export function AppLayout({ children }: PropsWithChildren) {
               }
             >
               首页与路线图
+            </NavLink>
+            <NavLink
+              to="/interview"
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+            >
+              面试常见问题
             </NavLink>
             <NavLink
               to="/leetcode"
@@ -52,6 +68,26 @@ export function AppLayout({ children }: PropsWithChildren) {
             ))}
           </div>
         </section>
+
+        {currentModule ? (
+          <section className="sidebar__section">
+            <h2 className="sidebar__title">{currentModule.title} 章节</h2>
+            <div className="nav-list">
+              {currentModule.sections.map((section) => (
+                <NavLink
+                  key={section.id}
+                  to={buildSectionPath(currentModule.id, section.id)}
+                  className={({ isActive }) =>
+                    `nav-link ${isActive ? "active" : ""}`
+                  }
+                >
+                  <strong>{section.title}</strong>
+                  <div className="muted">{section.summary}</div>
+                </NavLink>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         <section className="sidebar__section">
           <h2 className="sidebar__title">使用方式</h2>

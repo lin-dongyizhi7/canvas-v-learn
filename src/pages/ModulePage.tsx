@@ -1,15 +1,20 @@
 import { Link, Navigate, useParams } from "react-router-dom";
-import { learningModules } from "../data/modules";
+import {
+  buildSectionPath,
+  getModuleById,
+} from "../data/modules";
 import { ExperimentLab } from "../components/ExperimentLab";
-import { SectionCard } from "../components/SectionCard";
+import { moduleKnowledgeMap } from "../data/knowledge";
 
 export function ModulePage() {
   const params = useParams<{ moduleId: string }>();
-  const module = learningModules.find((item) => item.id === params.moduleId);
+  const module = getModuleById(params.moduleId);
 
   if (!module) {
     return <Navigate to="/" replace />;
   }
+
+  const knowledge = moduleKnowledgeMap[module.id];
 
   return (
     <>
@@ -32,16 +37,111 @@ export function ModulePage() {
 
         <div className="section-links">
           {module.sections.map((section) => (
-            <a key={section.id} href={`#${section.id}`} className="section-link">
+            <Link
+              key={section.id}
+              to={buildSectionPath(module.id, section.id)}
+              className="section-link"
+            >
               {section.title}
-            </a>
+            </Link>
           ))}
         </div>
       </section>
 
+      {knowledge ? (
+        <>
+          <section className="panel" style={{ marginTop: 24 }}>
+            <h2 className="panel__title">知识地图</h2>
+            <div className="knowledge-grid">
+              {knowledge.mustKnow.map((block) => (
+                <article key={block.title} className="knowledge-card">
+                  <h3>{block.title}</h3>
+                  <ul>
+                    {block.bullets.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="panel" style={{ marginTop: 24 }}>
+            <h2 className="panel__title">工程实践提醒</h2>
+            <div className="knowledge-grid">
+              {knowledge.engineeringNotes.map((block) => (
+                <article key={block.title} className="knowledge-card">
+                  <h3>{block.title}</h3>
+                  <ul>
+                    {block.bullets.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="panel" style={{ marginTop: 24 }}>
+            <h2 className="panel__title">模块面试提要</h2>
+            <div className="faq-list">
+              {knowledge.interviewHighlights.map((item) => (
+                <article key={item.question} className="faq-item">
+                  <h3>{item.question}</h3>
+                  <p>{item.answer}</p>
+                  <div className="tag-row">
+                    {item.tags.map((tag) => (
+                      <span key={tag} className="tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        </>
+      ) : null}
+
       <section className="stack">
         {module.sections.map((section) => (
-          <SectionCard key={section.id} section={section} />
+          <article key={section.id} className="section-card">
+            <h2 className="section-card__title">{section.title}</h2>
+            <p className="muted">{section.summary}</p>
+
+            <div className="tag-row" style={{ marginTop: 12 }}>
+              {section.tags.map((tag) => (
+                <span key={tag} className="tag">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <div className="section-card__grid section-card__grid--overview">
+              <div>
+                <h3>这节会学什么</h3>
+                <ul>
+                  {section.concepts.slice(0, 3).map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3>进入章节</h3>
+                <p className="muted">
+                  独立路由后，这一节会有自己的链接、编辑器和预览区域，复习时不再挤成一团。
+                </p>
+                <div className="button-row" style={{ marginTop: 16 }}>
+                  <Link
+                    className="button-link"
+                    to={buildSectionPath(module.id, section.id)}
+                  >
+                    进入本章
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </article>
         ))}
       </section>
 

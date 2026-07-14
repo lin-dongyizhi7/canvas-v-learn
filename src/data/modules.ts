@@ -51,6 +51,30 @@ export interface LearningModule {
   experimentLab?: ExperimentLabConfig;
 }
 
+export function getModuleById(moduleId?: string) {
+  return learningModules.find((item) => item.id === moduleId);
+}
+
+export function getSectionById(moduleId?: string, sectionId?: string) {
+  const module = getModuleById(moduleId);
+  if (!module) {
+    return null;
+  }
+
+  return module.sections.find((section) => section.id === sectionId) ?? null;
+}
+
+export function buildModulePath(moduleId: LearningModule["id"]) {
+  return `/module/${moduleId}`;
+}
+
+export function buildSectionPath(
+  moduleId: LearningModule["id"],
+  sectionId: string,
+) {
+  return `/module/${moduleId}/section/${sectionId}`;
+}
+
 export const learningModules: LearningModule[] = [
   {
     id: "canvas",
@@ -604,6 +628,6 @@ export const leetCodeGroups = [
 export const moduleRouteMeta = learningModules.map((module) => ({
   id: module.id,
   label: module.title,
-  href: `/module/${module.id}`,
+  href: buildModulePath(module.id),
   description: module.badge,
 }));
