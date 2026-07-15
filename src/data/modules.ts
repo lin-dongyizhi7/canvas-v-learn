@@ -1,5 +1,6 @@
 import {
   canvasBasicsSnippet,
+  canvasFreeEditSnippet,
   canvasParticlesSnippet,
   ffmpegSnippet,
   webAudioSnippet,
@@ -205,6 +206,32 @@ export const learningModules: LearningModule[] = [
           "尝试把背景网格缓存到离屏 Canvas 中再复用。",
         ],
         tags: ["offscreen", "performance", "cache", "clearRect"],
+      },
+      {
+        id: "canvas-free-edit",
+        title: "自由编辑",
+        summary:
+          "这一节就是给你留的纯动手场。左边直接改代码，右边立刻看画板结果，默认 HTML 壳子已经准备好，你只需要继续写 Canvas 语句。",
+        concepts: [
+          "真实学习闭环不是只看概念，而是自己改坐标、颜色、路径、动画参数，再看结果怎么变。",
+          "保留完整 HTML 模板能减少环境噪音，你不用先折腾脚手架，就能把注意力集中在 Canvas API 本身。",
+          "自由编辑区最适合做微实验，比如换一个渐变、加一段路径、试一次粒子参数，甚至手搓一个小组件。",
+          "如果某段效果写复杂了，建议把 draw 拆成多个函数，比如背景层、图形层、文本层，代码会更耐读。",
+        ],
+        practice: [
+          "把默认示例改成你自己的卡片或小海报，顺手试试 fillText、strokeRect、shadowBlur。",
+          "给画布加一个 requestAnimationFrame 动画，让图形缓慢移动或旋转。",
+          "尝试监听鼠标事件，在点击位置画圆或画线，把它变成你自己的小画板。",
+        ],
+        tags: ["playground", "editor", "preview", "practice"],
+        playground: {
+          title: "Canvas 自由编辑实验台",
+          description:
+            "左边是代码编辑器，右边是画板预览。默认已经填好完整 HTML，你重点改 draw() 里的 Canvas 语句就行。",
+          initialCode: canvasFreeEditSnippet,
+          runnable: true,
+          language: "html",
+        },
       },
     ],
     resources: [

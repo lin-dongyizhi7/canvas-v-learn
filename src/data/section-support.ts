@@ -480,6 +480,111 @@ const sectionApiMap: Record<string, SectionApiReference[]> = {
       ],
     },
   ],
+  "canvas-free-edit": [
+    {
+      name: "canvas.getContext('2d')",
+      description: "获取 2D 绘图上下文。自由编辑页里，几乎所有实验都从拿到这个 ctx 开始。",
+      params: [
+        {
+          name: "contextType",
+          type: `"2d"`,
+          description: "这里固定传 `2d` 即可，表示你要操作 Canvas 的 2D 渲染上下文。",
+        },
+      ],
+      docs: [
+        mdn(
+          "MDN getContext",
+          "https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLCanvasElement/getContext",
+        ),
+      ],
+    },
+    {
+      name: "ctx.clearRect",
+      description: "重绘前先清空画布，是做动画和多次实验时最稳的起手动作。",
+      params: [
+        { name: "x", type: "number", description: "清理区域起点横坐标。" },
+        { name: "y", type: "number", description: "清理区域起点纵坐标。" },
+        { name: "width", type: "number", description: "清理区域宽度。" },
+        { name: "height", type: "number", description: "清理区域高度。" },
+      ],
+      docs: [
+        mdn(
+          "MDN clearRect",
+          "https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/clearRect",
+        ),
+      ],
+    },
+    {
+      name: "ctx.fillRect / ctx.strokeRect / ctx.fillText",
+      description: "这是最适合自由编辑页热身的三件套：画块、画边框、写文字，很快就能拼出卡片和海报雏形。",
+      params: [
+        {
+          name: "fillRect(x, y, width, height)",
+          type: "number",
+          description: "绘制实心矩形，适合做色块、按钮、卡片底板。",
+        },
+        {
+          name: "strokeRect(x, y, width, height)",
+          type: "number",
+          description: "绘制矩形边框，适合理解描边与填充的区别。",
+        },
+        {
+          name: "fillText(text, x, y, maxWidth?)",
+          type: "string, number, number, number?",
+          description: "在指定坐标绘制文本，`maxWidth` 可选，用来限制文本绘制最大宽度。",
+        },
+      ],
+      docs: [
+        mdn(
+          "MDN fillRect",
+          "https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/fillRect",
+        ),
+        mdn(
+          "MDN strokeRect",
+          "https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/strokeRect",
+        ),
+        mdn(
+          "MDN fillText",
+          "https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/fillText",
+        ),
+      ],
+    },
+    {
+      name: "ctx.beginPath / ctx.moveTo / ctx.lineTo / ctx.arc",
+      description: "想从矩形进阶到自由图形时，这组路径 API 就会成为你的主力军。",
+      params: [
+        {
+          name: "beginPath()",
+          type: "void",
+          description: "开始一条新路径，避免和上一轮路径串在一起。",
+        },
+        {
+          name: "moveTo(x, y) / lineTo(x, y)",
+          type: "number, number",
+          description: "定义线段路径，适合做折线、边框、图标结构。",
+        },
+        {
+          name: "arc(x, y, radius, startAngle, endAngle, counterclockwise?)",
+          type: "number",
+          description: "绘制圆弧或完整圆，常见用法是 `0` 到 `Math.PI * 2`。",
+        },
+      ],
+      docs: [
+        mdn(
+          "MDN beginPath",
+          "https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/beginPath",
+        ),
+        mdn(
+          "MDN lineTo",
+          "https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/lineTo",
+        ),
+        mdn(
+          "MDN arc",
+          "https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/arc",
+        ),
+      ],
+    },
+  ],
   "webcodecs-intro": [
     {
       name: "VideoFrame",

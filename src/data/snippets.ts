@@ -86,6 +86,62 @@ export const canvasParticlesSnippet = String.raw`<!doctype html>
   </body>
 </html>`;
 
+export const canvasFreeEditSnippet = String.raw`<!doctype html>
+<html lang="zh-CN">
+  <body style="margin:0;background:#020617;color:#fff;font-family:sans-serif;">
+    <div style="padding:16px 16px 0;">
+      <h3 style="margin:0 0 8px;">Canvas 自由编辑实验板</h3>
+      <p style="margin:0 0 12px;color:#cbd5e1;">
+        默认 HTML 已经准备好了，黑塔只需要继续往 draw() 里补 Canvas 语句即可。
+      </p>
+    </div>
+    <canvas
+      id="canvas"
+      width="900"
+      height="560"
+      style="display:block;width:calc(100% - 32px);margin:0 16px 16px;background:#ffffff;border-radius:16px;"
+    ></canvas>
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+
+      function draw() {
+        // 每次重绘前先清空画布，避免上一次内容残留
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // 下面这段只是默认示例，你可以直接改掉继续实验
+        ctx.fillStyle = "#2A55E5";
+        ctx.fillRect(60, 60, 220, 120);
+
+        ctx.beginPath();
+        ctx.strokeStyle = "#7C3AED";
+        ctx.lineWidth = 8;
+        ctx.moveTo(340, 120);
+        ctx.lineTo(520, 70);
+        ctx.lineTo(640, 170);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.fillStyle = "#14B8A6";
+        ctx.arc(760, 160, 58, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "#111827";
+        ctx.font = "bold 30px sans-serif";
+        ctx.fillText("继续在这里补你的 Canvas 语句", 60, 280);
+
+        // 黑塔可以从这里往下继续写：
+        // ctx.beginPath();
+        // ctx.arc(200, 360, 56, 0, Math.PI * 2);
+        // ctx.fillStyle = "#F59E0B";
+        // ctx.fill();
+      }
+
+      draw();
+    </script>
+  </body>
+</html>`;
+
 export const webAudioSnippet = String.raw`<!doctype html>
 <html lang="zh-CN">
   <body style="margin:0;padding:16px;background:#0f172a;color:#fff;font-family:sans-serif;">
