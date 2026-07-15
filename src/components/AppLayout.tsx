@@ -48,6 +48,22 @@ export function AppLayout({ children }: PropsWithChildren) {
             >
               LeetCode 跳转页
             </NavLink>
+            <NavLink
+              to="/demo/video-player"
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+            >
+              视频播放器 Demo
+            </NavLink>
+            <NavLink
+              to="/demo/video-editor"
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+            >
+              视频剪辑 Demo
+            </NavLink>
           </div>
         </section>
 

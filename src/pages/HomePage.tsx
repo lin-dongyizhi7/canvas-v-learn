@@ -20,6 +20,12 @@ export function HomePage() {
           <Link className="button-link" to="/module/canvas">
             先学 Canvas
           </Link>
+          <Link className="button-link secondary-link" to="/demo/video-player">
+            打开视频 Demo
+          </Link>
+          <Link className="button-link secondary-link" to="/demo/video-editor">
+            打开剪辑 Demo
+          </Link>
           <Link className="button-link" to="/interview">
             看面试题库
           </Link>
@@ -45,6 +51,14 @@ export function HomePage() {
         <article className="metric-card">
           <h3>面试题沉淀</h3>
           <p className="muted">新增一整页高频问题，帮你把知识整理成可表达的答案。</p>
+        </article>
+        <article className="metric-card">
+          <h3>视频播放器 Demo</h3>
+          <p className="muted">新增可跳转实验页，直接上手折腾原生 video 播放器能力。</p>
+        </article>
+        <article className="metric-card">
+          <h3>视频剪辑 Demo</h3>
+          <p className="muted">把裁剪、音频、滤镜和 FFmpeg 命令拼装串成一条更像业务的链路。</p>
         </article>
       </section>
 
