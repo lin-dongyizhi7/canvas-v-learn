@@ -33,6 +33,14 @@ export function AppLayout({ children }: PropsWithChildren) {
               首页与路线图
             </NavLink>
             <NavLink
+              to="/cut"
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+            >
+              剪映工具首页
+            </NavLink>
+            <NavLink
               to="/interview"
               className={({ isActive }) =>
                 `nav-link ${isActive ? "active" : ""}`

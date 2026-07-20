@@ -89,20 +89,23 @@ export const canvasParticlesSnippet = String.raw`<!doctype html>
 export const canvasFreeEditSnippet = String.raw`<!doctype html>
 <html lang="zh-CN">
   <body style="margin:0;background:#020617;color:#fff;font-family:sans-serif;">
-    <div style="padding:16px 16px 0;">
+    <div id="main" style="padding:16px 16px 0;">
       <h3 style="margin:0 0 8px;">Canvas 自由编辑实验板</h3>
       <p style="margin:0 0 12px;color:#cbd5e1;">
         默认 HTML 已经准备好了，黑塔只需要继续往 draw() 里补 Canvas 语句即可。
       </p>
     </div>
-    <canvas
-      id="canvas"
-      width="900"
-      height="560"
-      style="display:block;width:calc(100% - 32px);margin:0 16px 16px;background:#ffffff;border-radius:16px;"
-    ></canvas>
     <script>
-      const canvas = document.getElementById("canvas");
+      // 用 JS 动态创建 canvas，方便你顺手实验挂载、替换和多画布场景
+      const canvas = document.createElement("canvas");
+      canvas.width = 900;
+      canvas.height = 600;
+      canvas.style =
+        "display:block;width:calc(100% - 32px);margin:0 16px 16px;background:#ffffff;border-radius:16px;";
+
+      const main = document.getElementById("main");
+      main.append(canvas);
+
       const ctx = canvas.getContext("2d");
 
       function draw() {

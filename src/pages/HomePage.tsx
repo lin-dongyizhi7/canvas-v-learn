@@ -17,6 +17,9 @@ export function HomePage() {
         </div>
 
         <div className="button-row">
+          <Link className="button-link" to="/cut">
+            进入剪映工具
+          </Link>
           <Link className="button-link" to="/module/canvas">
             先学 Canvas
           </Link>
@@ -36,6 +39,10 @@ export function HomePage() {
       </section>
 
       <section className="metrics-grid">
+        <article className="metric-card">
+          <h3>剪映工具首页</h3>
+          <p className="muted">新增 `/cut` 入口，后续完整视频剪辑工作台会从这里继续长出来。</p>
+        </article>
         <article className="metric-card">
           <h3>5 大技术模块</h3>
           <p className="muted">Canvas、WebCodecs、Web Audio、WebGL、FFmpeg。</p>
